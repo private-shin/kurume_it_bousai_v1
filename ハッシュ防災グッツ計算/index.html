@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>防災グッツ計算機</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>防災グッツ必要量計算</h1>
+    <p>家族構成と日数を入力すると、推奨される防災グッツの種類と数量を計算します。</p>
+
+    <div class="wizard">
+      <div class="progress"><i id="progressBar"></i></div>
+      <div class="step-indicator" id="stepIndicator">ステップ 1 / 4</div>
+
+      <form id="calcForm">
+        <div class="step" data-step="1">
+          <label>備蓄日数
+            <input type="number" id="days" value="3" min="1">
+          </label>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="grid">
+            <label>乳児（0-2歳）
+              <input type="number" id="infants" value="0" min="0">
+            </label>
+            <label>こども（3-12歳）
+              <input type="number" id="children" value="0" min="0">
+            </label>
+            <label>大人（13-64歳）
+              <input type="number" id="adults" value="1" min="0">
+            </label>
+            <label>高齢者（65歳以上）
+              <input type="number" id="elderly" value="0" min="0">
+            </label>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+              <label>特記事項（持病・常備薬・ペットなど）
+                <input type="text" id="notes" placeholder="例: インスリン使用、犬1匹">
+              </label>
+            </div>
+
+        <div class="step" data-step="4">
+          <div class="actions">
+            <button type="button" id="calcBtn">計算して結果を見る</button>
+            <button type="button" id="resetBtn">リセット</button>
+          </div>
+        </div>
+
+        <div class="step-footer">
+          <button type="button" id="prevStepBtn" class="hidden">戻る</button>
+          <button type="button" id="nextStepBtn">次へ</button>
+        </div>
+      </form>
+    </div>
+
+      <!-- 設定（カスタムアイテム）機能は削除されました -->
+
+    <section id="result" class="hidden">
+      <h2>推奨備蓄リスト</h2>
+      <div id="summary"></div>
+      <ul id="items"></ul>
+      <div class="notes" id="resultNotes"></div>
+    </section>
+
+    <footer>
+      <small>注意: 本ツールの数値は目安です。自治体の指示や医師の助言を優先してください。</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

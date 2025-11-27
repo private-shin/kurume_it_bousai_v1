@@ -1,0 +1,27 @@
+[
+  {
+    "name": "ペット用水",
+    "unit": "L",
+    "perDay": { "infant": 0, "child": 0.5, "adult": 1, "elderly": 1 }
+  },
+  {
+    "name": "哺乳瓶用洗剤（少量）",
+    "unit": "個",
+    "perDay": { "infant": 0.1, "child": 0, "adult": 0, "elderly": 0 }
+  },
+  {
+    "name": "モバイルバッテリー",
+    "unit": "個",
+    "perDay": { "infant": 0, "child": 0, "adult": 0.05, "elderly": 0.05 }
+  },
+  {
+    "name": "常備薬（家族分）",
+    "unit": "セット",
+    "perDay": { "infant": 0.01, "child": 0.01, "adult": 0.01, "elderly": 0.02 }
+  },
+  {
+    "name": "おしりふき（ウェットティッシュ）",
+    "unit": "パック",
+    "perDay": { "infant": 0.5, "child": 0.2, "adult": 0.2, "elderly": 0.2 }
+  }
+]

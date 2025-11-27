@@ -1,0 +1,28 @@
+*{box-sizing:border-box;font-family:Meiryo, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif}
+body{background:#f7f8fb;color:#111;margin:0;padding:24px}
+.container{max-width:820px;margin:0 auto;background:#fff;padding:24px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,0.06)}
+h1{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+label{display:block;margin-bottom:12px}
+input[type=number],input[type=text]{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+.actions{display:flex;gap:8px;margin-top:8px}
+button{padding:8px 12px;border-radius:6px;border:0;background:#0b79f7;color:#fff;cursor:pointer}
+button#resetBtn{background:#aaa}
+.hidden{display:none}
+#items{margin-top:12px}
+#items li{padding:8px;border-bottom:1px dashed #eee}
+.notes{margin-top:12px;padding:10px;background:#fff8e1;border-radius:6px;border:1px solid #ffe08a}
+footer{margin-top:18px;font-size:12px;color:#666}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+
+/* Wizard step styles */
+.wizard .step{display:none}
+.wizard .step.active{display:block}
+.wizard .step-footer{display:flex;justify-content:space-between;margin-top:12px}
+.wizard .progress{height:8px;background:#eee;border-radius:6px;overflow:hidden;margin-bottom:12px}
+.wizard .progress > i{display:block;height:100%;background:#0b79f7;width:0%}
+.step-indicator{font-size:13px;color:#666;margin-bottom:8px}
+
+/* Modal for config editing */
+#configModal{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.4);display:none}
+#configModal:not(.hidden){display:flex;align-items:center;justify-content:center}

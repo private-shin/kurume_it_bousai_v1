@@ -1,0 +1,7 @@
+[
+  {
+    "name": "ペット用水",
+    "unit": "L",
+    "perDay": { "infant": 0, "child": 0.5, "adult": 1, "elderly": 1 }
+  }
+]
